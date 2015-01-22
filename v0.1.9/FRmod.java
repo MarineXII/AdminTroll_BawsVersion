@@ -9,19 +9,19 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-public class FRadmin
+public class FRmod
   implements CommandExecutor
 {
   public Main plugin;
   
-  public FRadmin(Main plugin)
+  public FRmod(Main plugin)
   {
     this.plugin = plugin;
   }
   
   public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
   {
-    if (commandLabel.equalsIgnoreCase("fradmin")) {
+    if (commandLabel.equalsIgnoreCase("frmod")) {
       if (args.length == 0)
       {
         Player player = (Player)sender;
@@ -33,8 +33,8 @@ public class FRadmin
         Player targetPlayer = player.getServer().getPlayer(args[0]);
         if (targetPlayer != null)
         {
-          targetPlayer.setDisplayName(this.plugin.getConfig().getString("admintroll.fake.rank.admin.displayname").replaceAll("&", "§") + targetPlayer.getDisplayName());
-          targetPlayer.sendMessage(this.plugin.getConfig().getString("admintroll.fake.rank.admin.messageTOtarget").replaceAll("&", "§"));
+          targetPlayer.setDisplayName(this.plugin.getConfig().getString("admintroll.fake.rank.moderator.displayname").replaceAll("&", "§") + targetPlayer.getDisplayName());
+          targetPlayer.sendMessage(this.plugin.getConfig().getString("admintroll.fake.rank.moderator.messageTOtarget").replaceAll("&", "§"));
         }
         else
         {
@@ -59,8 +59,8 @@ public class FRadmin
           {
             player.sendMessage(ChatColor.GOLD + "[" + ChatColor.GREEN + "AdminTroll" + ChatColor.UNDERLINE + ":" + ChatColor.AQUA + "InvalidArguments" + ChatColor.GOLD + "]" + ChatColor.RED + a);
           }
+          //Code written by Sunny Zhang//
         }
-        //Code written by SunnyZhang//
       }
     }
     return false;
