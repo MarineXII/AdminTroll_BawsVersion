@@ -1,0 +1,60 @@
+name: AdminTroll
+main: thebawsgamer.troll.Main
+version: 0.4.1
+commands:
+  burn:
+    description: Burn that player!
+    usage: /burn <playername>
+    permission: admintroll.burn
+    permission-message: You don't have <permission>
+  murder:
+    description: Die!
+    usage: /murder
+    permission: admintroll.kill
+    permission-message: You don't have <permission>
+  strike:
+    description: Smite that person!
+    usage: /strike <playername>
+    permission: admintroll.smite
+    permission-message: You don't have <permission>
+  blowup:
+    description: Blow him up!
+    usage: /blowup <playername>
+    permission: admintroll.kill.blowup
+    permission-message: You don't have <permission>
+  falseleave:
+    description: Removed until further notice.
+    usage: /falseleave
+    permission: admintroll.fake.leave
+    permission-message: You don't have <permission>
+  falseop:
+    description: Fake op him xD
+    usage: /falseop <playername> 
+    permission: admintroll.fake.op
+    permission-message: You don't have <permission>
+  falsedeop:
+    description: Deop a player falsely!
+    usage: /falsedeop <playername>
+    permission: admintroll.fake.deop
+    permission-message: You don't have <permission>
+  spawn:
+    description: Spawn a mob at player!
+    permission: admintroll.spawn.entity
+    permission-message: You don't have <permission>
+  potion:
+    description: Adds potion effect of 50 seconds to player!
+    permission: admintroll.potion.effect
+    permission-message: You don't have <permission>
+  nickr:
+    description: Resets the display name of the player.
+    usage: /nickr <targetPlayer>
+    permission: admintroll.reset.nickname
+    permission-message: You don't have <permission>
+  frank:
+    description: Gives fake ranks!
+    permission: admintroll.fake.rank
+    permission-message: You don't have <permission>
+  attrap:
+    description: Block 'em in!
+    permission: admintroll.block.trap
+    permission-message: You don't have <permission>
